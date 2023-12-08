@@ -1,0 +1,32 @@
+
+
+@mixin accordion-variant($bg_accordion_toggle,
+$bg_accordion_toggle_active: $bg_accordion_toggle,
+ $color_accordion_toggle:#ffffff,
+ $color_accordion_toggle_active:$color_accordion_toggle,
+ $bd_color_accordion_toggle:$bg_accordion_toggle) {
+
+     .accordion-item {
+         .accordion-toggle {
+             background-color: $bg_accordion_toggle;
+             color: $color_accordion_toggle;
+
+         }
+
+         .accordion-body {
+             border-color: $bd_color_accordion_toggle;
+         }
+
+         &.active {
+
+             .accordion-toggle {
+                 color: $color_accordion_toggle_active;
+				background-color: $bg_accordion_toggle_active;
+
+
+             }
+
+         }
+
+     }
+ }

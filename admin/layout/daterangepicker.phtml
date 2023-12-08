@@ -1,0 +1,40 @@
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+  <script>
+
+    $(function() {
+
+      $('[data-filter-type="date-range"]').daterangepicker({
+            // showDropdowns: true,
+            autoUpdateInput: false,
+            applyClass: 'btn-sm btn-primary',
+            cancelClass: 'btn-sm btn-default',
+            locale: {
+                format: 'DD/MM/YYYY',
+                applyLabel: 'Aplicar',
+                cancelLabel: 'Limpiar',
+                fromLabel: 'Desde',
+                toLabel: 'Hasta',
+                customRangeLabel: 'Seleccionar rango',
+                daysOfWeek: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
+                monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+                    'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre',
+                    'Diciembre'],
+                // firstDay: 1
+            }
+        });
+
+        $('[data-filter-type="date-range"]').on('apply.daterangepicker', function(ev, picker) {
+          $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
+        });
+
+        $('[data-filter-type="date-range"]').on('cancel.daterangepicker', function(ev, picker) {
+            $(this).val('');
+        });
+
+    });
+
+  </script>

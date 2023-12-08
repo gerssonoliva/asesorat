@@ -1,0 +1,45 @@
+// ---------------------------------------------------
+//     main STYLE
+// -----------------------------------------------------
+
+.main {
+  // background-color: $bg-color-main;
+  padding: $padding-main;
+  transition: all 0.3s;
+  position: relative;
+  overflow-y: hidden;
+  max-width: 100%;
+  overflow-x: auto;
+  z-index: 128;
+
+  &.sidebar-hidden {
+    margin-left: 0;
+  }
+
+  .full-content{
+    margin-top: -$padding-main;
+    margin-right: -$padding-main;
+    margin-left: -$padding-main;
+    border-radius: 0;
+  }
+}
+
+@media(max-width:575.9px) {
+  .main.sidebar-hidden {
+    position: relative;
+    margin-left: 0 !important;
+  }
+
+  .main.sidebar-hidden::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 127;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    -webkit-animation: opacity .25s;
+    animation: opacity .25s
+  }
+}

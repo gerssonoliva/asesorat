@@ -1,0 +1,100 @@
+
+//  ---------------------------------------------------
+//     Sidebar Colors
+// -----------------------------------------------------
+
+//  ---------------------------------------------------
+// sidebar: Color Primary
+// class  : .sidebar-primary
+// -----------------------------------------------------
+
+$sidebar-primary-bg-color       : $white !default;
+$sidebar-primary-bg-header-color: $gray-100;
+
+$sidebar-primary-text-color      : $gray-800 !default;
+$sidebar-primary-text-hover-color: rgba($primary, .95) !default;
+
+$sidebar-primary-text-active-color: $white;
+$sidebar-primary-bg-active-color  : $primary;
+
+$sidebar-primary-bg-menu-items-color       : transparent !default;
+$sidebar-primary-bg-menu-items-active-color: transparent !default;
+
+$sidebar-primary-border-color-li-menu-items: rgba(0, 0, 0, 0.04) !default;
+
+//  ---------------------------------------------------
+// sidebar: Color Primary
+// class  : .sidebar-inverse-primary
+// -----------------------------------------------------
+
+$sidebar-inverse-bg-color       : $primary !default;
+$sidebar-inverse-bg-header-color: rgba($black, 0.08) !default;
+
+$sidebar-inverse-text-color      : rgba($white,0.5) !default;
+$sidebar-inverse-text-hover-color: $white  !default;
+
+$sidebar-inverse-text-active-color: $white !default;
+$sidebar-inverse-bg-active-color  : $secondary !default;
+
+$sidebar-inverse-bg-menu-items-color       : transparent !default;
+$sidebar-inverse-bg-menu-items-active-color: rgba(0, 0, 0, .2) !default;
+
+$sidebar-inverse-border-color-li-menu-items: rgba($white, 0.04) !default;
+
+
+//  ---------------------------------------------------
+// sidebar: Color Dark
+// class  : .sidebar-dark
+// -----------------------------------------------------
+
+$sidebar-dark-bg-color       : $dark !default;
+$sidebar-dark-bg-header-color: rgba($black, 0.08) !default;
+
+$sidebar-dark-text-color      : rgba($white,0.5) !default;
+$sidebar-dark-text-hover-color: $white  !default;
+
+$sidebar-dark-text-active-color: $white !default;
+// $sidebar-dark-bg-active-color  : $secondary !default;
+$sidebar-dark-bg-active-color  : $info !default;
+
+$sidebar-dark-bg-menu-items-color       : transparent !default;
+$sidebar-dark-bg-menu-items-active-color: rgba(0, 0, 0, .2) !default;
+
+$sidebar-dark-border-color-li-menu-items: rgba($white, 0.04) !default;
+
+
+
+.sidebar-primary {
+  @include sidebar-variant($sidebar-primary-bg-color,
+  $sidebar-primary-bg-header-color,
+  $sidebar-primary-text-color,
+  $sidebar-primary-text-hover-color,
+  $sidebar-primary-text-active-color,
+  $sidebar-primary-bg-active-color,
+  $sidebar-primary-bg-menu-items-color,
+  $sidebar-primary-bg-menu-items-active-color);
+}
+
+.sidebar-inverse {
+  @include sidebar-variant($sidebar-inverse-bg-color,
+  $sidebar-inverse-bg-header-color,
+  $sidebar-inverse-text-color,
+  $sidebar-inverse-text-hover-color,
+  $sidebar-inverse-text-active-color,
+  $sidebar-inverse-bg-active-color,
+  $sidebar-inverse-bg-menu-items-color,
+  $sidebar-inverse-bg-menu-items-active-color);
+}
+
+.sidebar-dark {
+  @include sidebar-variant($sidebar-dark-bg-color,
+  $sidebar-dark-bg-header-color,
+  $sidebar-dark-text-color,
+  $sidebar-dark-text-hover-color,
+  $sidebar-dark-text-active-color,
+  $sidebar-dark-bg-active-color,
+  $sidebar-dark-bg-menu-items-color,
+  $sidebar-dark-bg-menu-items-active-color,
+  $sidebar-dark-border-color-li-menu-items);
+}
+

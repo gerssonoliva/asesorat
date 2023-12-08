@@ -1,0 +1,39 @@
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<?php
+// extraemos todas la variables
+extract($setvar);
+
+$titulo      = !empty($titulo ) ? $titulo : "Admin " ;
+$follow      = !empty($follow ) ? $follow : "follow" ;
+$description = !empty($description ) ? $description : "Adminstrador" ;
+$keywords    = !empty($keywords ) ? $keywords : "" ;
+
+$path = !empty($path) ? $path : 'admin/';
+
+?>
+
+<title><?php echo $titulo; ?></title>
+<link rel="icon" href="<?php echo $path;?>favicon.ico" sizes="32x32" />
+<meta name="robots" content="<?php echo $follow; ?>" />
+
+<meta name="description" content="<?php echo $description; ?>" />
+<meta name="keywords" content="<?php echo $keywords; ?>" />
+<meta name="robots" content="<?php echo $setvar['follow']; ?>" />
+<base href="http://localhost/landing-asesorat/" />
+<!-- <base href="https://asesorat.com.pe/landing-asesorat/" /> -->
+<!-- <base href="http://planeatec.com/landing-asesorat/" /> -->
+<!-- <base href="/" /> -->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+<link rel="stylesheet" href="<?php echo $path;?>css/app.admin.css">
+
+<!-- JavaScript -->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>

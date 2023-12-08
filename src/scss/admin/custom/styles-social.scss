@@ -1,0 +1,49 @@
+ul.social {
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+ul.social li {
+  display: inline-block;
+}
+
+ul.social li a {
+  text-decoration: none !important;
+}
+
+.social li a:hover {
+  opacity: 0.75;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+// SOCIAL default
+.social li a {
+  color: $primary;
+}
+
+.social li a:hover {
+  color: $white !important;
+}
+
+// SOCIAL white
+.social-white li a {
+  color: $white;
+}
+
+.social-white li a:hover {
+  color: rgba(#000000, .5) !important;
+}
+
+// SOCIAL white
+.social-dark li a {
+  color: $dark;
+}
+
+.social-dark li a:hover {
+  color: lighten($dark, 5%) !important;
+}

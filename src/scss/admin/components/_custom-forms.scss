@@ -1,0 +1,14 @@
+.form-orange {
+  .custom-control-input {
+
+    &:checked~.custom-control-label::before {
+      color: $warning;
+      border-color: $warning;
+      @include gradient-bg($warning);
+    }
+
+    &:focus:not(:checked)~.custom-control-label::before {
+      border-color: lighten($warning, 25%);
+    }
+  }
+}

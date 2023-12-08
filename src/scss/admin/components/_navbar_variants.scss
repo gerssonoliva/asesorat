@@ -1,0 +1,60 @@
+// navbar-variants
+
+@include media-breakpoint-up(md) {
+  .collapse.navbar-light {
+    .navbar-nav {
+      .nav-link {
+        color: $navbar-light-color;
+
+        @include hover-focus {
+          color: $navbar-light-hover-color;
+        }
+
+      }
+
+      .show>.nav-link,
+      .active>.nav-link,
+      .nav-link.show,
+      .nav-link.active {
+        color: $navbar-light-active-color;
+      }
+    }
+
+  }
+
+  .collapse.navbar-dark {
+    .navbar-brand {
+      color: $navbar-dark-brand-color;
+
+      @include hover-focus {
+        color: $navbar-dark-brand-hover-color;
+      }
+    }
+
+    .navbar-nav {
+      .nav-link {
+        color: $navbar-dark-color;
+
+        @include hover-focus {
+          color: $navbar-dark-hover-color;
+        }
+
+      }
+
+      .show>.nav-link,
+      .active>.nav-link,
+      .nav-link.show,
+      .nav-link.active {
+        color: $navbar-dark-active-color;
+      }
+    }
+
+  }
+
+}
+
+@media (max-width: 767.98px) {
+  .navbar-collapse {
+    background: transparent !important;
+  }
+}

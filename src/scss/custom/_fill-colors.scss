@@ -1,0 +1,24 @@
+@each $color,
+$value in $theme-colors {
+
+  .fill-#{$color},
+  .fill-#{$color} svg {
+    fill: $value !important;
+  }
+}
+
+.fill-white,
+.fill-white svg {
+  fill: $white !important;
+}
+
+.fill-black,
+.fill-black svg {
+  fill: $black !important;
+}
+
+.fill-white-50,
+.fill-white-50 svg {
+  fill: rgba($white, .5) !important;
+}
+

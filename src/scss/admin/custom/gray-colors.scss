@@ -1,0 +1,11 @@
+@each $color, $value in $grays {
+  .bg-gray-#{$color} {
+    background-color: $value!important;
+  }
+}
+
+@each $color, $value in $grays {
+  .text-gray-#{$color} {
+    color: $value!important;
+  }
+}

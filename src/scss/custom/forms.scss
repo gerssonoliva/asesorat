@@ -1,0 +1,81 @@
+.form-theme {
+  &.content {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .form-control {
+    background-color: #f7f8f8;
+    font-weight: 300;
+  }
+
+  .form-control:not(textarea) {
+    // border: 1px solid #ccc;
+    height: auto;
+    padding: 0.5rem 0.75rem;
+    // color: #ffffff;
+    border-radius: .75rem;
+
+
+  }
+
+  ::placeholder {
+    // color: #c3c5ca;
+    opacity: 1;
+  }
+
+  // INPUT DATE
+  input[type="date"] {
+    position: relative;
+  }
+
+  input[type="date"]:after {
+    font-family: 'boxicons';
+    font-weight: 900;
+    content: "\e9e5";
+    color: #555;
+    padding: 0 5px;
+  }
+
+  input[type="date"]:hover:after {
+    color: #bf1400;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
+  }
+
+  input[type="date"]::-webkit-inner-spin-button {
+    z-index: 1;
+  }
+
+  input[type="date"]::-webkit-clear-button {
+    z-index: 1;
+  }
+
+
+
+}
+
+.form-footer {
+
+  .send,
+  .form-group {
+    border-radius: 0px;
+  }
+
+}
+
+.caja {
+  position: absolute;
+  bottom: -13px;
+  left: 34%;
+}

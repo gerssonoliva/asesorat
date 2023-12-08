@@ -1,0 +1,25 @@
+.app-wrap {
+  display: flex;
+  flex-direction: row;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow-x: hidden;
+  min-height: calc(100vh - #{$nav-height});
+
+  .sidebar,
+  .main {
+    min-height: inherit;
+  }
+
+  .sidebar {
+    flex: 0 0 $sidebar-width;
+    -ms-flex-order: -1;
+    order: -1;
+  }
+
+  .main {
+    -ms-flex: 1;
+    flex: 1;
+    min-width: 0;
+  }
+}

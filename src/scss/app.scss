@@ -1,0 +1,18 @@
+@import './fonts';
+@import './variables';
+// Bootstrap
+@import "~bootstrap/scss/_functions";
+@import "~bootstrap/scss/_mixins";
+@import '~bootstrap/scss/bootstrap';
+// Helper css light
+@import '~helper-css-light/scss/helper-bootstrap';
+// animate-circle css
+
+/* @import '~animate-hover/src/scss/animate-square';
+@import '~animate-hover/src/scss/animate-circle';
+@import '~animate-hover/src/scss/animate-hover'; */
+
+// Custom styles
+@import './custom/app.custom';
+// @import './components/app.components';
+// @import './contents/app.contents';

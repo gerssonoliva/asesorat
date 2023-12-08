@@ -1,0 +1,7 @@
+ @mixin btn-link($link-color) {
+   color: $link-color;
+
+   @include hover {
+     color: darken($link-color, 15%)
+   }
+ }

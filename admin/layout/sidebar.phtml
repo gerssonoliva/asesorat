@@ -1,0 +1,42 @@
+<?php
+$sidebar = !empty($sidebar) ? $sidebar : [];
+extract($sidebar);
+
+// $sidebar_class = !empty($sidebar_class) ? $sidebar_class : "sidebar-dark";
+// $sidebar_toggle = !empty($sidebar_toggle) ? $sidebar_toggle : "all";
+$sidebar_active = !empty($sidebar_active) ? $sidebar_active : [0, 0];
+
+?>
+<nav class="sidebar sidebar-dark scroll-item" data-sidebar="menu" data-menu-toggle="only">
+  <!-- <div class="sidebar-header">
+    <span> Planeatec </span>
+  </div> -->
+  <span class="heading">Opciones</span>
+  <ul class="sidenav">
+
+    <li>
+      <a class="menu <?php if ($sidebar_active[0] == 3) {echo 'active';}?>"href="#" role="button">
+        <i class="fas fa-user-tie"></i> Personas
+      </a>
+
+      <ul class="menu-items">
+        <li>
+          <a class="<?php if ($sidebar_active[0] == 3 && $sidebar_active[1] == 1) {echo 'active';}?>" href="admin/user/user.php">
+            <i class="fa fa-list"></i>
+            Usuarios
+          </a>
+        </li>
+
+        <li>
+          <a class="<?php if ($sidebar_active[0] == 3 && $sidebar_active[1] == 2) {echo 'active';}?>" href="admin/suscriptor/suscriptor.php">
+            <i class="fa fa-list"></i>
+            Suscriptores Web
+          </a>
+        </li>
+
+      </ul>
+    </li>
+
+
+  </ul>
+</nav>

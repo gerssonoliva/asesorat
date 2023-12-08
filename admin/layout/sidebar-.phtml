@@ -1,0 +1,64 @@
+<?php
+$sidebar = !empty($sidebar) ? $sidebar : [];
+extract($sidebar);
+
+// $sidebar_class = !empty($sidebar_class) ? $sidebar_class : "sidebar-dark";
+// $sidebar_toggle = !empty($sidebar_toggle) ? $sidebar_toggle : "all";
+$sidebar_active = !empty($sidebar_active) ? $sidebar_active : [0, 0];
+
+?>
+<nav class="sidebar sidebar-dark scroll-item" data-sidebar="menu" data-menu-toggle="only">
+  <!-- <div class="sidebar-header">
+    <span> Planeatec </span>
+  </div> -->
+  <span class="heading">Intranet</span>
+  <ul class="sidenav">
+
+    <li>
+      <a class="menu <?php if ($sidebar_active[0] == 1) {echo 'active';}?>" href="#" role="button">
+        <i class="fa fa-list"></i> General
+      </a>
+      <ul class="menu-items">
+
+        <li>
+          <a class="<?php if ($sidebar_active[0] == 1 && $sidebar_active[1] == 1) {echo 'active';}?>" href="admin/user/user.php">
+            <i class="icofont icofont-curved-right"></i> Usuarios
+          </a>
+        </li>
+
+      </ul>
+    </li>
+    <li>
+      <a class="<?php if ($sidebar_active[0] == 2) {echo 'active';}?>" href="admin/habitacion/habitacion.php" role="button">
+        <i class="fas fa-suitcase-rolling"></i>
+        Habitaciones
+      </a>
+    </li>
+
+  <!--
+    <li>
+      <a class="menu <?php if ($sidebar_active[0] == 2) {echo 'active';}?>" href="#" role="button">
+        <i class="fas fa-suitcase-rolling"></i>
+        Habitaciones
+      </a>
+      <ul class="menu-items">
+        <li>
+          <a class="<?php if ($sidebar_active[0] == 2 && $sidebar_active[1] == 1) {echo 'active';}?>" href="admin/plato/plato.php">
+            <i class="fa fa-list"></i>
+            Platos
+          </a>
+        </li>
+
+        <li>
+          <a class="<?php if ($sidebar_active[0] == 2 && $sidebar_active[1] == 2) {echo 'active';}?>" href="admin/categoria/categoria.php">
+            <i class="fa fa-list"></i>
+            Categorias
+          </a>
+        </li>
+
+      </ul>
+    </li>
+  -->
+
+  </ul>
+</nav>

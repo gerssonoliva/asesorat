@@ -1,0 +1,115 @@
+.bg-body-dark {
+  background-color: $bg-body-dark !important;
+}
+
+
+.logo-admin {
+  max-width: 30px;
+}
+
+.img-view-edit {
+  max-height: 250px;
+}
+
+/* disabled row-disabled in table */
+
+.row-disabled {
+  color: $gray-600 !important;
+
+  .is-disabled {
+    color: currentColor;
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none;
+    // background-color: transparent !important;
+    pointer-events: none;
+  }
+
+}
+
+.close-danger {
+  font-size: 1.25rem;
+  position: absolute;
+  background-color: $black !important;
+  right: -15px;
+  top: -15px;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  opacity: .75;
+  color: $gray-100;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    opacity: .9 !important;
+    color: #fff !important;
+
+  }
+}
+
+.preview-img {
+  .preview-item-image {
+    max-width: 300px;
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    margin-right: 0.35rem;
+    margin-bottom: 0.5rem;
+    max-width: 100%;
+  }
+
+  img:last-child {
+    margin-right: 0;
+  }
+}
+
+.ui-state-default {
+  .icon-move {
+    color: rgba(#000000, 0.75);
+    position: absolute;
+    // margin-left: 1px;
+    // margin-top: -1px;
+    cursor: pointer;
+    padding: 1px;
+
+  }
+
+  &:hover .icon-move,
+  .icon-move:hover {
+    color: rgba(#000000, 0.95);
+    background-color: rgba(#000000, 0.15);
+  }
+
+
+}
+
+
+/* select2 */
+.select2-selection--single .select2-selection__rendered {
+  line-height: 33px !important
+}
+
+.select2-selection--multiple .select2-selection__rendered {
+  line-height: 24px !important
+}
+
+// .select2-selection
+.select2-container .select2-selection--single {
+  min-height: 35.5px !important
+}
+
+.select2-container--default .select2-selection--multiple {
+  background-color: white;
+  border: 1px solid #aaa;
+}
+
+.select2-container--focus .select2-selection--multiple {
+  border: solid #9acffa 1px !important;
+  outline: 0;
+
+  box-shadow: 0 0 0 0.2rem rgba(33, 150, 243, 0.15);
+}

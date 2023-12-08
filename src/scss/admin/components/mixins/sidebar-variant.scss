@@ -1,0 +1,59 @@
+@mixin sidebar-variant($sidebar-bg-color,
+$sidebar-bg-header-color,
+$sidebar-text-color,
+$sidebar-text-hover-color,
+$sidebar-text-active-color,
+$sidebar-bg-active-color,
+$sidebar-bg-menu-items-color,
+$sidebar-bg-menu-items-active-color,
+$sidebar-border-color-li-menu-items: rgba(0, 0, 0, 0.04)) {
+
+  background-color: $sidebar-bg-color;
+  color: $sidebar-text-color;
+
+  ul ul li {
+    border-color: $sidebar-border-color-li-menu-items;
+  }
+
+  .sidebar-header {
+    background-color: $sidebar-bg-header-color;
+  }
+
+  .heading {
+    color: rgba($sidebar-text-color, 0.4);
+  }
+
+  .sidenav li a {
+    color: $sidebar-text-color;
+  }
+
+  .sidenav li a:hover {
+    color: $sidebar-text-hover-color;
+  }
+
+  .sidenav li>a.menu.active {
+    color: $sidebar-text-active-color;
+    background-color: $sidebar-bg-active-color;
+  }
+
+  .sidenav li .menu-items a.active {
+    color: $sidebar-text-hover-color;
+  }
+
+  .sidenav li>a.menu~ul.menu-items {
+    background-color: $sidebar-bg-menu-items-color;
+  }
+
+  .sidenav li>a.menu.active~ul.menu-items {
+    background-color: $sidebar-bg-menu-items-active-color;
+  }
+
+  .sidenav li>a.menu::after {
+    border-right-color: $sidebar-text-color;
+  }
+
+  .sidenav li>a.active.menu::after {
+    border-right-color: rgba($sidebar-text-active-color, .85);
+  }
+
+}

@@ -1,0 +1,31 @@
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<?php
+// extraemos todas la variables
+extract($setvar);
+
+$titulo      = !empty($titulo ) ? $titulo : "Landing Asesorat" ;
+$follow      = !empty($follow ) ? $follow : "follow" ;
+$description = !empty($description ) ? $description : "" ;
+$keywords    = !empty($keywords ) ? $keywords : "" ;
+
+?>
+
+<title><?php echo $titulo; ?></title>
+<!-- <link rel="icon" href="favicon.ico" sizes="32x32" /> -->
+<link rel="icon" href="favicon.ico" sizes="16x16" />
+<!-- <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png"> -->
+<meta name="robots" content="<?php echo $follow; ?>" />
+
+<meta name="description" content="<?php echo $description; ?>" />
+<meta name="keywords" content="<?php echo $keywords; ?>" />
+<meta name="robots" content="<?php echo $setvar['follow']; ?>" />
+<!-- <base href="https://asesorat.com.pe/landing-asesorat/" /> -->
+<!-- <base href="http://planeatec.com/landing-asesorat/" /> -->
+<!-- <base href="/" /> -->
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/app.min.css">
+

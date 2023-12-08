@@ -1,0 +1,51 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "\"Web site \"",
+  "private": true,
+  "scripts": {
+    "start": "webpack --config webpack.config.js",
+    "js": "webpack --config webpack.config.js",
+    "dev": "npm run sass & npm run js",
+    "build": "webpack --mode production",
+    "css": "npm-run-all  css-compile css-prefix-main css-minify",
+    "css-compile": "npm-run-all --parallel css-compile-*",
+    "css-compile-main": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/app.scss css/app.css --importer=node_modules/node-sass-tilde-importer",
+    "css-minify": "npm-run-all --parallel css-minify-*",
+    "css-minify-main": "cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output css/app.min.css css/app.css",
+    "css-prefix-main": "postcss --config build/postcss.config.js --replace \"css/*.css\" \"!css/*.min.css\"",
+    "css-admin": "npm-run-all  css-admin-compile css-admin-prefix-main css-admin-minify",
+    "css-admin-compile": "npm-run-all --parallel css-admin-compile-*",
+    "css-admin-compile-main": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/admin/app.admin.scss admin/css/app.admin.css --importer=node_modules/node-sass-tilde-importer",
+    "css-admin-minify": "npm-run-all --parallel css-admin-minify-*",
+    "css-admin-minify-main": "cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output admin/css/app.admin.min.css admin/css/app.admin.css",
+    "css-admin-prefix-main": "postcss --config build/postcss.config.js --replace \"admin/css/*.css\" \"!admin/css/*.min.css\"",
+    "prod": "npm run css & npm run js "
+  },
+  "author": "@armandoaepp",
+  "license": "ISC",
+  "dependencies": {
+    "animate-hover": "^1.1.5",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
+    "helper-css-light": "^2.6.6",
+    "jquery": "^3.5.1",
+    "lodash": "^4.17.15",
+    "perfect-scrollbar": "^1.5.0",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "autoprefixer": "^9.8.0",
+    "babel-loader": "^8.1.0",
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^4.14.1",
+    "node-sass-tilde-importer": "^1.0.2",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^2.9.7"
+  }
+}

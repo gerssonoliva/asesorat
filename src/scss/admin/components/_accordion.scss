@@ -1,0 +1,162 @@
+// ========================================================
+//color-dafault
+// ========================================================
+$bg_accordion_toggle : rgba(0, 0, 0, .07);
+$bg_accordion_toggle_active: rgba(0, 0, 0, .09);
+$color_accordion_toggle : lighten(#000, 35%);
+$color_accordion_toggle_active: lighten(#000, 20%);
+$bd_color_accordion_toggle : rgba(0, 0, 0, .05);
+
+.accordion {
+	width: 100%;
+	margin: 0 auto;
+
+	.accordion-item {
+		margin-bottom: .25rem;
+
+		.accordion-toggle {
+			cursor: pointer;
+			margin: 0;
+			padding: 0.75rem 1rem;
+			position: relative;
+			background-color: $bg_accordion_toggle;
+			color: $color_accordion_toggle;
+			transition: all .6s ease-in-out 0s;
+
+			.icon {
+				float: right;
+			}
+
+		}
+
+		.accordion-body {
+			border: 1px solid $bd_color_accordion_toggle;
+			max-height: 0;
+			overflow: hidden;
+
+			.accordion-content {
+				padding: 1rem;
+			}
+		}
+
+		&.active {
+			transition: all 1s cubic-bezier(0, 0, 1, 1);
+
+			.accordion-toggle {
+				color: $color_accordion_toggle_active;
+				background-color: $bg_accordion_toggle_active;
+
+				.icon {
+					transform: rotate(90deg);
+					transition: transform .6s ease-in-out;
+				}
+			}
+
+			.accordion-body {
+				// height: 100%;
+				transition: max-height 2.5s linear 0s;
+				max-height: 1500px;
+
+			}
+
+		}
+
+	}
+
+}
+
+
+// ========================================================
+// Accordion Colors
+// ========================================================
+
+// primary
+$bg_accordion_toggle_primary          : $primary;
+$bg_accordion_toggle_active_primary   : $primary;
+$color_accordion_toggle_primary       : rgba($white, 0.75);
+$color_accordion_toggle_active_primary: $white;
+$bd_color_accordion_toggle_primary    : $primary; //$gray-200;
+
+.accordion-primary {
+	@include accordion-variant($bg_accordion_toggle_primary,
+	$bg_accordion_toggle_active_primary,
+	$color_accordion_toggle_primary,
+	$color_accordion_toggle_active_primary,
+	$bd_color_accordion_toggle_primary)
+}
+
+// success
+$bg_accordion_toggle_success          : $success;
+$bg_accordion_toggle_active_success   : $success;
+$color_accordion_toggle_success       : rgba($white, 0.75);
+$color_accordion_toggle_active_success: $white;
+$bd_color_accordion_toggle_success    : $success; 
+
+.accordion-success {
+	@include accordion-variant($bg_accordion_toggle_success,
+	$bg_accordion_toggle_active_success,
+	$color_accordion_toggle_success,
+	$color_accordion_toggle_active_success,
+	$bd_color_accordion_toggle_success)
+}
+
+// info
+$bg_accordion_toggle_info          : $info;
+$bg_accordion_toggle_active_info   : $info;
+$color_accordion_toggle_info       : rgba($white, 0.75);
+$color_accordion_toggle_active_info: $white;
+$bd_color_accordion_toggle_info    : $info;  
+
+.accordion-info {
+	@include accordion-variant($bg_accordion_toggle_info,
+	$bg_accordion_toggle_active_info,
+	$color_accordion_toggle_info,
+	$color_accordion_toggle_active_info,
+	$bd_color_accordion_toggle_info)
+}
+
+// danger
+$bg_accordion_toggle_danger          : $danger;
+$bg_accordion_toggle_active_danger   : $danger;
+$color_accordion_toggle_danger       : rgba($white, 0.75);
+$color_accordion_toggle_active_danger: $white;
+$bd_color_accordion_toggle_danger    : $danger; 
+
+.accordion-danger {
+	@include accordion-variant($bg_accordion_toggle_danger,
+	$bg_accordion_toggle_active_danger,
+	$color_accordion_toggle_danger,
+	$color_accordion_toggle_active_danger,
+	$bd_color_accordion_toggle_danger)
+}
+
+// warning
+$bg_accordion_toggle_warning          : $warning;
+$bg_accordion_toggle_active_warning   : $warning;
+$color_accordion_toggle_warning       : rgba($white, 0.75);
+$color_accordion_toggle_active_warning: $white;
+$bd_color_accordion_toggle_warning    : $warning; 
+
+.accordion-warning {
+	@include accordion-variant($bg_accordion_toggle_warning,
+	$bg_accordion_toggle_active_warning,
+	$color_accordion_toggle_warning,
+	$color_accordion_toggle_active_warning,
+	$bd_color_accordion_toggle_warning)
+}
+
+// blue_gray
+$bg_accordion_toggle_blue_gray          : #607D8B;
+$bg_accordion_toggle_active_blue_gray   : #455A64;
+$color_accordion_toggle_blue_gray       : rgba($white, 0.75);
+$color_accordion_toggle_active_blue_gray: $white;
+$bd_color_accordion_toggle_blue_gray    :  #BDBDBD;
+
+.accordion-blue-gray {
+	@include accordion-variant($bg_accordion_toggle_blue_gray,
+	$bg_accordion_toggle_active_blue_gray,
+	$color_accordion_toggle_blue_gray,
+	$color_accordion_toggle_active_blue_gray,
+	$bd_color_accordion_toggle_blue_gray)
+}
+

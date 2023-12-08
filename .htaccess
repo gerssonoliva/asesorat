@@ -1,0 +1,25 @@
+
+#Options -Indexes
+#ServerSignature Off
+
+# Activar RewriteEngine
+  RewriteEngine on
+  RewriteCond %{SCRIPT_FILENAME} !-d
+  RewriteCond %{SCRIPT_FILENAME} !-f
+
+  ##Rewriterule ^proyectos$ proyectos.php  [L]
+  #Rewriterule ^productos/([0-9]+)/(.*)$ producto-detalle.php?id=$1  [L]
+  #Rewriterule ^categorias/([0-9]+)/(.*)/([0-9]+)/(.*)$ sub_categoria_productos.php?categoria_id=$1&categoria=$2&sub_categoria_id=$3&sub_categoria=$4  [L]
+
+
+
+<IfModule mod_rewrite.c>
+  # Activar RewriteEngine
+  RewriteEngine on
+  RewriteCond %{SCRIPT_FILENAME} !-d
+  RewriteCond %{SCRIPT_FILENAME} !-f
+
+  RewriteRule ^(.*)$ $1.php
+
+</IfModule>
+

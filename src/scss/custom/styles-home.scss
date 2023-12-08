@@ -1,0 +1,32 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    min-height: 100%;
+}
+
+.formulario {
+    background: rgba(29, 40, 53, 0.85);
+}
+
+.titulo {
+    background: rgba(17, 26, 36, 0.85);
+    color: rgba(0, 243, 255, 1);
+}
+
+.titulo_2 h1 {
+    color: rgba(34, 51, 66, 1)
+}
+
+.campo_t:before {
+    content: "";
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-right: 1rem;
+    background-color: rgba(0, 243, 255, 1);
+}

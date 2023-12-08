@@ -1,0 +1,43 @@
+.no-decoration,
+.no-decoration:hover,
+.link-text,
+.link-text:hover {
+  text-decoration: none !important;
+}
+
+/* btn link */
+.btn-link,
+.btn-link:focus,
+.link {
+  box-shadow: none;
+}
+
+@each $color,
+$value in $theme-colors {
+  .link-#{$color} {
+    color: $value !important;
+
+    @include hover {
+      color: darken($value, 10%) !important;
+      // text-decoration: $link-hover-decoration;
+    }
+  }
+}
+
+.link-white {
+  color: $white!important;
+
+  @include hover {
+    color: darken($white, 10%)!important;
+    // text-decoration: $link-hover-decoration;
+  }
+}
+
+.link-black {
+  color: $black!important;
+
+  @include hover {
+    color: darken($black, 10%)!important;
+    // text-decoration: $link-hover-decoration;
+  }
+}

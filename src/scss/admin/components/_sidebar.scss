@@ -1,0 +1,200 @@
+//  ---------------------------------------------------
+//     SIDEBAR STYLE
+// -----------------------------------------------------
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: $sidebar-width;
+  overflow-y: auto;
+  transition: all 0.3s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.06);
+  z-index: 129;
+
+  &.sidebar-hidden {
+    margin-left: -$sidebar-width;
+  }
+
+  &.sidebar-shadow{
+    box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+
+}
+
+//  ---------------------------------------------------
+//     SIDEBAR STYLE NAVs and Colores
+// -----------------------------------------------------
+.sidebar {
+  background-color: $sidebar-bg-color;
+  color: $sidebar-text-color;
+  font-size: $sidebar-font-size;
+
+  .sidebar-header {
+    padding: 0.25rem;
+    font-size: 1.05rem;
+    background-color: $sidebar-bg-header-color;
+    min-height: $sidebar-header-height;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center !important;
+    text-align: center ;
+    font-weight: 700;
+  }
+
+  .heading {
+    color: rgba($sidebar-text-color, 0.4);
+    display: block;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: .75rem;
+    text-transform: uppercase;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    a,
+    a:hover {
+      text-decoration: none;
+    }
+
+    li {
+      position: relative;
+
+      a {
+        padding: 0.75rem;
+        // padding-left: 0.75rem;
+        display: flex;
+        align-items: center;
+
+        i {
+          margin-right: 0.5rem;
+        }
+
+      }
+    }
+
+    ul li {
+      a {
+        padding-left: 1.5rem;
+      }
+
+      ul li {
+        a {
+          padding-left: 2.5rem;
+        }
+      }
+    }
+
+    ul li {
+      border-bottom: 1px solid $sidebar-border-color-li-menu-items;
+    }
+
+    ul li:last-child {
+      border-bottom: 1px solid transparent;
+    }
+
+  }
+
+  /* ul Hijas */
+  ul li ul {
+    transition: max-height 0.2s ease;
+  }
+
+  .sidenav li a {
+    color: $sidebar-text-color;
+  }
+
+  .sidenav li a:hover {
+    color: $sidebar-text-hover-color;
+  }
+
+  .sidenav li>a.menu.active,
+  .sidenav>li>a.active {
+    color: $sidebar-text-active-color;
+    background-color: $sidebar-bg-active-color;
+    font-weight: 600;
+  }
+
+  .sidenav li .menu-items a.active {
+    font-weight: 600;
+    color: $sidebar-text-hover-color;
+  }
+
+  .sidenav li>a.menu~ul.menu-items {
+    max-height: 0;
+    transition: max-height 0.5s ease;
+    overflow-y: hidden;
+    background-color: $sidebar-bg-menu-items-color;
+  }
+
+  .sidenav li>a.menu.active~ul.menu-items {
+    max-height: 1500px;
+    background-color: $sidebar-bg-menu-items-active-color;
+  }
+
+  .sidenav li>a.menu::after {
+    width: 0;
+    height: 0;
+    margin-left: 0.255em;
+    content: "";
+    border-right: 0.45em solid $sidebar-text-color;
+    border-top: 0.45em solid transparent;
+    border-bottom: 0.45em solid transparent;
+    transition: all 0.4s ease-in-out;
+    float: right;
+    // margin-top: 3px;
+    margin-right: 2px;
+    right: 10px;
+    position: absolute;
+  }
+
+  .sidenav li>a.menu.active::after {
+    transform: rotate(-90deg);
+    border-right-color: $sidebar-text-active-color;
+  }
+
+}
+
+
+// ---------------------------------------------------
+//     Sidebar FIXED
+// -----------------------------------------------------
+.sidebar {
+  position: fixed;
+  max-height:calc(100vh - #{$nav-height});
+
+  &.sidebar-hidden {
+    margin-left: -$sidebar-width;
+  }
+}
+
+.sidebar~.main {
+  margin-left: $sidebar-width;
+}
+
+// ---------------------------------------------------
+//     MEDIAQUERIES
+// -----------------------------------------------------
+@media (max-width: 768px) {
+  .sidebar {
+    margin-left: -$sidebar-width;
+  }
+
+  .sidebar.sidebar-hidden {
+    margin-left: 0;
+  }
+
+  .sidebarCollapse span {
+    display: none;
+  }
+
+  .sidebar~.main {
+    margin-left: 0;
+
+    &.sidebar-hidden {
+      margin-left: $sidebar-width;
+    }
+  }
+}

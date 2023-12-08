@@ -1,0 +1,9 @@
+
+cPanel details
+URL (options)	https://server250.web-hosting.com/cpanel
+ 	(if DNS propagation is pending)
+
+http://hostalcostanorte.com.pe/cpanel
+cPanel username	hostnnmh
+cPanel password	G10Y5eB4451L
+

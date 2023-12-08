@@ -1,0 +1,118 @@
+// ---------------------------------------------------
+// Gray Colors (PALETA MATERIAL DESIGNA)
+// -----------------------------------------------------
+
+$white : #ffffff !default;
+$gray-50 : #fafafa!default;
+$gray-100: #f5f5f5!default;
+$gray-200: #eeeeee!default;
+$gray-300: #e0e0e0!default;
+$gray-400: #bdbdbd!default;
+$gray-500: #9e9e9e!default;
+$gray-600: #757575!default;
+$gray-700: #616161!default;
+$gray-800: #424242!default;
+$gray-900: #212121!default;
+$black : #000000 !default;
+
+$grays: (
+    "50" : $gray-50,
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+);
+
+/* paleta colors */
+
+// =============================================
+$blue  : #4285F4;
+$cyan  : #33b5e5;
+$red   : #ff4444;
+$yellow: #ffbb33;
+$green : #00C851;
+
+// Theme Colors
+$primary: $blue !default;
+$success: $green !default;
+$info   : $cyan !default;
+$warning: $yellow !default;
+$danger : $red !default;
+
+$secondary: #aa66cc !default;
+$light    : $gray-100 !default;
+$dark     : #37474F !default;
+
+$bg-body-dark: #f0f3f6 !default;
+// =============================================
+
+$theme-colors: ();
+
+// Typography
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$text-color : $gray-600;
+$font-size-base: 0.9rem !default; // Assumes the browser default, typically `16px`
+
+// Body
+$body-bg : $white !default;
+$body-color: $gray-900 !default;
+
+//  ---------------------------------------------------
+//     Breadcrumbs
+// -----------------------------------------------------
+
+$breadcrumb-bg:                     $gray-100 !default;
+$breadcrumb-divider-color:          $gray-600 !default;
+$breadcrumb-active-color:           $gray-600 !default;
+$breadcrumb-divider:                quote("/") !default;
+
+//  ---------------------------------------------------
+//     Tables
+// -----------------------------------------------------
+$table-border-color:          $gray-200 !default;
+
+//  Narbar Variables
+$nav-height: 60px;
+$bg-navbar-brand: rgba(0, 0, 0, 0.01);
+
+$navbar-dropdown-menu-min-width: 230px;
+
+//  ---------------------------------------------------
+//     Variables Main
+// -----------------------------------------------------
+
+// $bg-color-main: $white;
+$padding-main: 1.25rem ;
+
+//  ---------------------------------------------------
+//     Variables Sidebar
+// -----------------------------------------------------
+
+$sidebar-width        : 220px;
+$nav-height           : 60px;
+$sidebar-header-height: auto;
+$sidebar-font-size    : $font-size-base;
+
+//  ---------------------------------------------------
+// sidebar: Color Default
+// -----------------------------------------------------
+
+$sidebar-bg-color: $white !default;
+$sidebar-bg-header-color : $gray-100;
+
+$sidebar-text-color: rgba($black, .6) !default;
+$sidebar-text-hover-color: rgba($black, .7) !default;
+
+$sidebar-text-active-color: rgba($black, .9) !default;
+$sidebar-bg-active-color: rgba($black, .02) !default;
+
+$sidebar-bg-menu-items-color: transparent !default;
+$sidebar-bg-menu-items-active-color: transparent !default;
+
+$sidebar-border-color-li-menu-items: rgba(0, 0, 0, 0.04) !default;
+

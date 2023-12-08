@@ -1,0 +1,64 @@
+$white : #ffffff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+// $gray-500: #adb5bd !default;
+$gray-500: #b2b2b2 !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #404040 !default;
+$black : #0f0f0f !default;
+$blue: #0560e5;
+$cyan: #5CC6D0;
+$red: #FF0000;
+$yellow: #ff7f00;
+$green: #4ca92b;
+$grey: #f5f5f5;
+// Theme Colors
+$primary: $yellow !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$content: $grey !default;
+$secondary: #8c0028 !default;
+// $light    : $gray-100 !default;
+$dark: #3c3c3b !default;
+$theme-colors: ();
+// Body
+//
+// Settings for the `<body>` element.
+// $body-bg:    $white !default;
+// $body-color: $primary !default;
+// Typography
+$font-family-sans-serif: 'Montserrat',
+sans-serif;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+// Body
+$body-bg: $white !default;
+// HOVERS
+$primary-color: $primary !default;
+$primary-light-color: ligthen($primary) !default;
+$primary-dark-color: #0474A5 !default;
+$secondary-color: #EFDC05 !default;
+//  ---------------------------------------------------
+//     Variables Sidebar
+// -----------------------------------------------------
+$sidebar-width: 220px;
+$nav-height: 60px;
+$sidebar-header-height: auto;
+$sidebar-font-size: $font-size-base;
+//  ---------------------------------------------------
+// sidebar: Color Default
+// -----------------------------------------------------
+$sidebar-bg-color: $white !default;
+$sidebar-bg-header-color: $gray-100;
+$sidebar-text-color: rgba($black, .6) !default;
+$sidebar-text-hover-color: rgba($black, .7) !default;
+$sidebar-text-active-color: rgba($black, .9) !default;
+$sidebar-bg-active-color: rgba($black, .02) !default;
+$sidebar-bg-menu-items-color: transparent !default;
+$sidebar-bg-menu-items-active-color: transparent !default;
+$sidebar-border-color-li-menu-items: rgba(0, 0, 0, 0.04) !default;
